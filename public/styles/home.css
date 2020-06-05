@@ -1,0 +1,122 @@
+#page-home {
+    /* Buscando locais das imagens de background
+    '../' significa: sair da pasta atual para a pasta antes dela*/
+    height: 97vh;
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw 130px;
+}
+
+#page-home .content {
+/* Determina a ocupação da tela 90% com máximo de 1100px
+Alterações na tela respeitam isso de forma dinâmica */
+    width: 90%;
+    max-width: 1100px;
+    height: 100%;
+
+/* Alinhamento de caixa
+Elementos de content automaticamente respeitam a margem para centralizar
+O '0' representa top/bottom e 'auto' left/right
+pode receber todos elementos: top right bottom left */
+    margin: 0 auto;
+
+/* Altera o flow do flex para coluna
+(faz isso em content para 'preparar o terreno' de main */
+    display: flex;
+    flex-direction: column;
+}
+
+#page-home header {
+/* Definindo como o display é exibido e como é alinhado e justificado */
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#page-home header a {
+    display: flex;
+
+    color: var(--title-color);
+    font-weight: 700;
+}
+/* Inserir imagem com margem entre ela e o texto e com tamanhos determinados */
+#page-home header a span {
+    margin-right: 16px;
+    display: flex;
+    background-image: url("../assets/log-in.svg");
+    width: 20px;
+    height: 20px;
+}
+#page-home main {
+    max-width: 560px;
+
+    height: 600px;
+
+/* Como em content mudou o flow, aqui define-se o flex=1 para ocupar
+todo o espaço disponível */
+    flex: 1;
+/* Quero centralizar o conteúdo de main na vertical então altero
+o flow para coluna e justifico no centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#page-home main h1 {
+    font-size: 54px;
+}
+/* Formata p em main (tamanho, altura de linha e margem entre p e h1 */
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+/* Formata a e main (tamanho dinâmico e máximo, cor de fundo, altura, borda 
+arredondada (pode definir diferente para os 4 cantos), contúdo é display flex,
+para usar align-items e margin top) */
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+
+    background-color: var(--primary-color);
+
+    transition: 400ms;
+}
+/* Altera a cor caso passe o mouse em cima com transição de 400ms (definido no
+original) */
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+/* Coloca um filtro na área de span (onde fica a imagem) para escurecer com 
+rgb alfa (rgb[0, 255] + transparência[0, 1]) */
+    background-color: rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Criando pseudo-elemento para colocar a imagem de fundo no span */
+#page-home main a span::after {
+    content: "";
+    background-image: url("../assets/search.svg");
+    width: 20px;
+    height: 20px;
+}
+#page-home main a strong {
+/* Ao invés do tamanho padrão, com flex:1 damos o tamanho restante de todo 'a'
+centralizando ao longo do botão que não está sendo usado por span */
+    flex: 1;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+:root {
+/* Na raíz, temos a variável que é a cor, alterando a cor aqui altera em tudo */
+    --title-color: #322153;
+    --primary-color: #34cb79;
+    --background-color: #f0f0f5;
+} 
+* {
+/* Zera todos os seletores padrão do navegador */
+    margin: 0;
+    padding: 0;
+/* Borda será largura máxima ao invés do padding */
+    box-sizing: border-box;
+
+}
+html {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+/* Cor de fundo */
+    background: var(--background-color);
+    -webkit-font-smoothing: antialiased;
+}
+a {
+/* Retirar sublinhado de links */
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--title-color);
+}
+
+
