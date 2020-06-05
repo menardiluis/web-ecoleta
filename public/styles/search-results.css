@@ -1,12 +1,16 @@
+body {
+    background-color: white;
+}
 /* Criando um pseudo elemento para mesclar o fundo com outra cor */
 body::after {
     content: "";
-    position: fixed;
-    background: white;
-    top: 260px;
+    position: absolute;
+    background: var(--background-color);
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    height: 16rem;
     /* Profundidade -1 joga tudo para trás */
     z-index: -1;
 }
