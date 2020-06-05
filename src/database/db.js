@@ -57,17 +57,17 @@ module.exports = db
     //     db.run(query, values, afterInsertData)
 
     //     // 3) consultar dados da tabela
-    // db.all(`SELECT * FROM places`, function (err, rows) {
-    //     if (err) {
-    //         return console.log(err)
-    //     }
+//     db.all(`SELECT * FROM places`, function (err, rows) {
+//         if (err) {
+//             return console.log(err)
+//         }
 
-    //     console.log("Aqui estão seus registros: ")
-    //     console.log(rows)
-    // })
+//         console.log("Aqui estão seus registros: ")
+//         console.log(rows)
+//     })
 
-    //     // 4) deletar um dado da tabela
-//     db.run(`DELETE FROM places WHERE id = ?`, [4], function (err, rows) {
+//     // 4) deletar um dado da tabela
+//     db.run(`DELETE FROM places WHERE id = ?`, [7], function (err, rows) {
 //         if (err) {
 //             return console.log(err)
 //         }
